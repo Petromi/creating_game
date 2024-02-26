@@ -17,9 +17,9 @@ def game_core_v3(number:int=1) -> int:
         while predict != number:
             count +=1  
             if predict < number:                        #Проверяем условия совпадение числа предсказания с загаданным
-                predict += int(round(predict / 2), 0)   #И каждый раз, пока не найдем само число
+                predict += round(predict / 2)           #И каждый раз, пока не найдем само число
             elif predict > number:                      #снижаем область поиска в два раза
-                predict -= int(round(predict/2, 0))
+                predict -= round(predict / 2)
     else:
         count += 1
         
